@@ -1,4 +1,4 @@
-import './App.css'
+import './utils/style/global.scss'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'

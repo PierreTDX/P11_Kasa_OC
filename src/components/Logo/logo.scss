@@ -1,0 +1,25 @@
+@use './../../utils/style/variables.scss';
+
+.paramMainLogo {
+    color : variables.$mainColor;
+    height: 46.88px;
+}
+
+.paramFooterLogo {
+    color : variables.$defaultFooterFontColor;
+    height: 39.44px;
+}
+
+@media (min-width : 769px) {
+    .paramMainLogo {
+        color : variables.$mainColor;
+        height: 68px;
+    }
+}
+
+@media (max-width : 340px) {
+    .paramMainLogo {
+        color : variables.$mainColor;
+        height: 40px;
+    }
+}

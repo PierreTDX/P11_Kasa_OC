@@ -1,0 +1,14 @@
+@use './variables.scss';
+
+body {
+    margin: 0;
+    background-color: variables.$defaultBackgroundColor;
+}
+
+#root {
+    max-width: 1440px;
+    margin: 0 auto;
+    font-family: variables.$defaultFont;
+    font-weight: 400;
+    color: variables.$defaultFontColor;
+}

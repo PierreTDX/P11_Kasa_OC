@@ -1,8 +1,19 @@
+import './footer.scss'
+import { FooterLogo } from '../Logo'
+
+
 function Footer() {
-  
+
   return (
       <>
-          <h1>ICI le Footer</h1>
+        <footer>
+          <div className='componentFooterLogo'>
+            <FooterLogo />
+          </div>
+          <nav>
+            <p>© 2020 Kasa. All rights reserved</p>
+          </nav>
+        </footer>
       </>
   )
 }
