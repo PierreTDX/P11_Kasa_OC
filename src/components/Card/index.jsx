@@ -6,7 +6,7 @@ function Card({ id, title, image }) {
 
     return (
         <>
-        <Link to={`/logement/${id}`}>
+        <Link to={`/P11_Kasa_OC/logement/${id}`}>
             <article className='Card' style={{ backgroundImage: `url(${image})`}}>
             <h2>{title}</h2>
             </article>
