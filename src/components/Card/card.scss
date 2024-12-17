@@ -3,13 +3,14 @@
 .Card {
     background-size: cover;
     background-position: center;
-    width: calc(100vw - 40px);
+    width: 320px;
     height: 255px;
     border-radius: 10px;
     display: flex;
     align-items: flex-end;
     position: relative;
     overflow: hidden; /* Empêche le pseudo-élément de déborder */
+    box-sizing: border-box;
 }
 
 .Card::before {
@@ -39,5 +40,6 @@ h2 {
     .Card {
         max-width: 340px;
         height: 340px;
+        box-sizing: border-box;
     }
 }
