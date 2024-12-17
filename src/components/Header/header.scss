@@ -33,6 +33,11 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+.activeLink {
+    text-decoration: underline;
+}
+
 @media (min-width : 769px) {
 
     header {
