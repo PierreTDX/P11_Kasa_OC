@@ -1,14 +1,21 @@
 import './banner.scss'
+import PropTypes from 'prop-types'
 
-function Banner() {
+function Banner({ title, image, opacity }) {
 
     return (
         <>
-            <div className='homeBanner'>
-            <h1>Chez vous, partout et ailleurs</h1>
+            <div className='Banner' style={{ backgroundImage: `url(${image})`, '--banner-opacity': opacity }}>
+            <h1>{title}</h1>
             </div>
         </>
     )
   }
-  
+
+  Banner.propTypes = {
+    title: PropTypes.string,
+    image: PropTypes.string,
+    opacity: PropTypes.string
+  };
+
   export default Banner
