@@ -2,7 +2,7 @@ function Logement() {
   
     return (
         <>
-            <h1>ICI la page du logement</h1>
+            <h2>ICI la page du logement</h2>
         </>
     )
   }

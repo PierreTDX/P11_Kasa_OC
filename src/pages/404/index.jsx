@@ -2,7 +2,7 @@ function Error() {
   
     return (
         <>
-            <h1>ICI la page 404</h1>
+            <h2>ICI la page 404</h2>
         </>
     )
   }
