@@ -15,7 +15,7 @@ function Banner({ title, image, opacity }) {
   Banner.propTypes = {
     title: PropTypes.string,
     image: PropTypes.string,
-    opacity: PropTypes.string
-  };
+    opacity: PropTypes.number
+  }
 
   export default Banner
