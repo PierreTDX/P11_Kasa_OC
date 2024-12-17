@@ -13,11 +13,11 @@ function Header() {
           </div>
           <nav>
             <ul className='inf768'>
-              <li><NavLink to="/P11_Kasa_OC/" className={({ isActive }) => (isActive ? 'activeLink' : '')}>ACCUEIL</NavLink></li>
+              <li><NavLink to="/P11_Kasa_OC/" end className={({ isActive }) => (isActive ? 'activeLink' : '')}>ACCUEIL</NavLink></li>
               <li><NavLink to="/P11_Kasa_OC/about" className={({ isActive }) => (isActive ? 'activeLink' : '')}>A PROPOS</NavLink></li>
             </ul>
             <ul className='sup768'>
-              <li><NavLink to="/P11_Kasa_OC/" className={({ isActive }) => (isActive ? 'activeLink' : '')}>Accueil</NavLink></li>
+              <li><NavLink to="/P11_Kasa_OC/" end className={({ isActive }) => (isActive ? 'activeLink' : '')}>Accueil</NavLink></li>
               <li><NavLink to="/P11_Kasa_OC/about" className={({ isActive }) => (isActive ? 'activeLink' : '')}>A Propos</NavLink></li>
             </ul>
           </nav>
