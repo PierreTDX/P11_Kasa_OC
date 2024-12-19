@@ -10,9 +10,7 @@ function Footer() {
           <div className='componentFooterLogo'>
             <FooterLogo />
           </div>
-          <nav>
-            <p>© 2020 Kasa. All rights reserved</p>
-          </nav>
+          <p className='pFooter'>© 2020 Kasa. All rights reserved</p>
         </footer>
       </>
   )

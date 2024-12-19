@@ -1,0 +1,58 @@
+@use './../../utils/style/variables.scss';
+
+
+.collapse {
+    display: flex;
+    flex-direction: column;
+}
+
+.collapseHeader {
+    background-color: variables.$mainColor;
+    color: variables.$titleColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    height: 30px;
+    padding: 0px 12px 0px 10px;
+    z-index: 1;
+}
+
+h3 {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.chevron {
+    height: 18px;
+    transition: transform 0.3s ease; // Animation fluide pour la rotation
+}
+
+.collapseHeader.open .chevron {
+    transform: rotate(-180deg); // Rotation lorsque l'état est ouvert
+}
+
+.collapseDescription {
+    background-color: variables.$secondaryBackgroundColor;
+    font-size: 12px;
+    padding: 0px 20px; // état initial du paddin à 0
+    margin: 0;
+    border-radius: 0px 0px 5px 5px;
+    position: relative;
+    top: -15px;
+    max-height: 0; // Masque la description par défaut
+    overflow: hidden; // Cache le contenu débordant
+    transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out; //Transition fluide
+}
+
+.collapseHeader.open + .collapseDescription {
+    max-height: 500px; // hauteur maximale nécessaire
+    padding: 28px 20px 19px 20px;
+}
+
+
+
+
+@media (min-width : 1040px) {
+
+}

@@ -1,8 +1,8 @@
-import './gallery.scss'
-import logements from "../../datas/logements.json"
+import './cardGallery.scss'
 import Card from "../../components/Card"
+import logements from "../../datas/logements.json"
 
-function Gallery() {
+function CardGallery() {
 
     return (
         <>
@@ -20,4 +20,4 @@ function Gallery() {
     )
   }
 
-  export default Gallery
+  export default CardGallery

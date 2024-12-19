@@ -1,5 +1,5 @@
 import Banner from "../../components/Banner"
-import Gallery from "../../components/Gallery"
+import CardGallery from "../../components/CardGallery"
 import HomeBanner from "../../assets/img/homeBanner.png"
 
 function Home() {
@@ -7,7 +7,7 @@ function Home() {
     return (
         <>
             <Banner title="Chez vous, partout et ailleurs" image={HomeBanner} opacity={0.6}/>
-            <Gallery />
+            <CardGallery />
         </>
     )
   }

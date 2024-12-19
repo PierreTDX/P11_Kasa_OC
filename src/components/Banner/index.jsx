@@ -6,7 +6,7 @@ function Banner({ title, image, opacity }) {
     return (
         <>
             <div className='Banner' style={{ backgroundImage: `url(${image})`, '--banner-opacity': opacity }}>
-            <h1>{title}</h1>
+              <h1>{title}</h1>
             </div>
         </>
     )
