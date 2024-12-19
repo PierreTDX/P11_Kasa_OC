@@ -3,14 +3,13 @@
 .Card {
     background-size: cover;
     background-position: center;
-    width: 320px;
+    width: calc(100vw - 60px);
     height: 255px;
     border-radius: 10px;
     display: flex;
     align-items: flex-end;
     position: relative;
     overflow: hidden; /* Empêche le pseudo-élément de déborder */
-    box-sizing: border-box;
 }
 
 .Card::before {
