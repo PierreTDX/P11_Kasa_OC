@@ -14,12 +14,12 @@ function App() {
     <Router>
         <Header />
         <Routes>
-            <Route path="/P11_Kasa_OC/" element={<Home />} />
+            <Route path="/" element={<Home />} />
 
-            <Route path="/P11_Kasa_OC/about" element={<About />} />
-            <Route path="/P11_Kasa_OC/logement/:id" element={<Logement />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/logement/:id" element={<Logement />} />
 
-            <Route path="/P11_Kasa_OC/*" element={<Error />} />
+            <Route path="/*" element={<Error />} />
         </Routes>
         <Footer />
     </Router>
