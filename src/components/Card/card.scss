@@ -3,7 +3,8 @@
 .Card {
     background-size: cover;
     background-position: center;
-    width: calc(100vw - 60px);
+    max-width: auto;
+    // width: calc(100vw - 60px);
     height: 255px;
     border-radius: 10px;
     display: flex;
@@ -22,10 +23,6 @@
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.205) 99.99%, rgba(0, 0, 0, 0.5) 100%);
 }
 
-.Card > * {
-    position: relative;
-}
-
 h2 {
     color: variables.$titleColor;
     font-size: 18px;
@@ -37,7 +34,7 @@ h2 {
 
 @media (min-width : 1040px) {
     .Card {
-        max-width: 340px;
+        width: 340px;
         height: 340px;
         box-sizing: border-box;
     }

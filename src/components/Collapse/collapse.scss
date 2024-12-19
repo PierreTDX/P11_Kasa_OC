@@ -28,18 +28,19 @@ h3 {
     transition: transform 0.3s ease; // Animation fluide pour la rotation
 }
 
-.collapseHeader.open .chevron {
+.open .chevron {
     transform: rotate(-180deg); // Rotation lorsque l'état est ouvert
 }
 
 .collapseDescription {
     background-color: variables.$secondaryBackgroundColor;
+    // background-color: red;
     font-size: 12px;
     padding: 0px 20px; // état initial du paddin à 0
     margin: 0;
     border-radius: 0px 0px 5px 5px;
     position: relative;
-    top: -15px;
+    top: -5px;
     max-height: 0; // Masque la description par défaut
     overflow: hidden; // Cache le contenu débordant
     transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out; //Transition fluide
@@ -47,12 +48,30 @@ h3 {
 
 .collapseHeader.open + .collapseDescription {
     max-height: 500px; // hauteur maximale nécessaire
-    padding: 28px 20px 19px 20px;
+    padding: 18px 20px 19px 20px;
 }
 
-
-
-
 @media (min-width : 1040px) {
+    .collapseHeader {
+        border-radius: 5px;
+        height: 54px;
+        padding: 0px 21px 0px 15px;
+    }
 
+    h3 {
+        font-size: 18px;
+    }
+
+    .chevron {
+        height: 24px;
+    }
+   
+
+    .collapseDescription {
+        font-size: 18px;
+    }
+
+    .collapseHeader.open + .collapseDescription {
+        padding: 21px 20px 20px 20px;
+    }
 }
