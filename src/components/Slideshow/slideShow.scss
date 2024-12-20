@@ -10,6 +10,7 @@
     background-position: center;
     overflow: hidden;
     border-radius: 10px;
+    transition: background-image 0.3s ease-in-out;
 }
 
 h5 {
@@ -21,11 +22,12 @@ h5 {
     font-weight: 500;
     color: variables.$titleColor;
     margin: 13px 0px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
 .prevButton,
-.nextButton  {
-    position :absolute;
+.nextButton {
+    position: absolute;
     height: 100%;
     background: transparent;
     border: 0;
@@ -38,6 +40,11 @@ h5 {
 .slideChevron {
     height: 19px;
     color: variables.$titleColor;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slideChevron:hover {
+    transform: scale(1.2);
 }
 
 button {
