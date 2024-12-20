@@ -1,0 +1,63 @@
+@use './../../utils/style/variables.scss';
+
+.slideShow {
+    position: relative;
+    height: 255px;
+    display: flex;
+    margin: 0px 20px;
+    max-width: 1240px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+h5 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: variables.$titleColor;
+    margin: 13px 0px;
+}
+
+.prevButton,
+.nextButton  {
+    position :absolute;
+    height: 100%;
+    background: transparent;
+    border: 0;
+}
+
+.nextButton {
+    right: 0;
+}
+
+.slideChevron {
+    height: 19px;
+    color: variables.$titleColor;
+}
+
+button {
+    cursor: pointer;
+}
+
+@media (min-width : 1040px) {
+    .slideShow {
+        margin: 0px 100px;
+        height: 415px;
+    }
+
+    h5 {
+        font-size: 18px;
+        margin: 25px 0px;
+    }
+
+    .slideChevron {
+        height: 79px;
+        color: variables.$titleColor;
+        margin: 15px;
+    }
+}
