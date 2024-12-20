@@ -12,28 +12,33 @@ function Collapse({ title, description }) {
     setIsOpen(!isOpen); // Change l'état
   }
 
-    return (
-        <>
-            <article className='collapse'>
-              <div className={`collapseHeader ${isOpen ? 'open' : ''}`} onClick={toggleCollapse}>
-                <h3>{title}</h3>
-                <FontAwesomeIcon icon={faChevronUp} className="chevron"/>
-              </div>
-              <p  className='collapseDescription'
-                  ref={descriptionRef}
-                  style={{
-                    maxHeight: isOpen ? `${descriptionRef.current.scrollHeight}px` : "0px", // Ajuste la hauteur en fonction du contenu
-                  }}>
-                {description}
-              </p>
-            </article>
-        </>
-    )
-  }
+  return (
+    <>
+      <article className='collapse'>
+        <div className={`collapseHeader ${isOpen ? 'open' : ''}`} onClick={toggleCollapse}>
+          <h3>{title}</h3>
+          <FontAwesomeIcon icon={faChevronUp} className="chevron" />
+        </div>
+        <div className='collapseDescription'
+          ref={descriptionRef}
+          style={{
+            maxHeight: isOpen ? `${descriptionRef.current.scrollHeight}px` : "0px", // Ajuste la hauteur en fonction du contenu
+          }}>
+          {Array.isArray(description)
+            ? description.map((word, index) => <p className='descriptionList' key={index}>{word}</p>)
+            : description}
+        </div>
+      </article>
+    </>
+  )
+}
 
-  Collapse.propTypes = {
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired
-  }
+Collapse.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.array
+  ]).isRequired
+}
 
-  export default Collapse
+export default Collapse

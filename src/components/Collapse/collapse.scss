@@ -44,11 +44,18 @@ h3 {
     max-height: 0; // Masque la description par défaut
     overflow: hidden; // Cache le contenu débordant
     transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out; //Transition fluide
+    gap: 2px;
+    display: flex;
+    flex-direction: column;
 }
 
-.collapseHeader.open + .collapseDescription {
+.collapseHeader.open+.collapseDescription {
     max-height: 500px; // hauteur maximale nécessaire
     padding: 18px 20px 19px 20px;
+}
+
+.descriptionList {
+    margin: 0;
 }
 
 @media (min-width : 1040px) {
@@ -65,12 +72,13 @@ h3 {
     .chevron {
         height: 24px;
     }
-   
+
     .collapseDescription {
         font-size: 18px;
+        gap: 5px;
     }
 
-    .collapseHeader.open + .collapseDescription {
+    .collapseHeader.open+.collapseDescription {
         padding: 21px 20px 20px 20px;
     }
 }

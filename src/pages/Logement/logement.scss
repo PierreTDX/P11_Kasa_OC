@@ -1,0 +1,83 @@
+@use './../../utils/style/variables.scss';
+
+.infosLogement {
+    margin: 0px 20px;
+}
+
+h6 {
+    font-size: 18px;
+    font-weight: 500;
+    color: variables.$mainColor;
+    margin: 15px 0px 5px 0px;
+    line-height: 1.5;
+}
+
+.location {
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0px 0px 5px 0px;
+}
+
+.host {
+    font-size: 12px;
+    font-weight: 500;
+    color: variables.$mainColor;
+    width: 65px;
+    text-align: right;
+    margin: 0;
+}
+
+.hostImg {
+    width: 32px;
+    height: 32px;
+    border-radius: 50px;
+    background-color: #C4C4C4;
+}
+
+.hostDetails {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.starsHost {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px 0px 13px 0px;
+}
+
+.tagList {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.tagContent {
+    background-color: variables.$mainColor;
+    font-size: 10px;
+    font-weight: 700;
+    color: variables.$titleColor;
+    min-width: 84px;
+    height: 18px;
+    align-content: center;
+    border-radius: 5px;
+}
+
+.tag {
+    padding: 0px 10px;
+}
+
+.colapseLogement {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 27px;
+}
+
+@media (min-width : 1040px) {
+    .infosLogement {
+        margin: 0px 100px;
+    }
+}
