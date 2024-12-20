@@ -1,0 +1,42 @@
+@use './../../utils/style/variables.scss';
+
+h4 {
+    font-size: 96px;
+    font-weight: 700;
+    color: variables.$mainColor;
+    text-align: center;
+    margin: 113px 20px;
+}
+
+.message404 {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    color: variables.$mainColor;
+    margin: 0px 20px;
+}
+
+.backHome {
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    margin: 113px 20px;
+    text-decoration: underline;
+}
+
+@media (min-width : 1040px) {
+    h4 {
+        font-size: 288px;
+        margin: 139px 20px;
+    }
+    
+    .message404 {
+        font-size: 36px;
+    }
+    
+    .backHome {
+        font-size: 18px;
+        margin: 139px 20px;
+    }
+    
+}

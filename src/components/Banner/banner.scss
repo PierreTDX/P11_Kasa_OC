@@ -26,16 +26,13 @@
     // opacity: 0.6; 
 }
 
-.Banner > * {
-    position: relative;
-}
-
 h1 {
     color: variables.$titleColor;
     font-size: 24px;
     font-weight: 700;
     margin-left: 16px;
     margin-right: 16px;
+    z-index: 1;
 }
 
 @media (min-width : 1040px) {
