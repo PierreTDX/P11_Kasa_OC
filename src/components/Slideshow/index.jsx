@@ -19,7 +19,8 @@ function SlideShow({ images }) {
 
   // Gestion de la navigation au clavier
   const handleKeyDown = (event) => {
-    if (event.key === 'ArrowRight') {
+    if (event.key === 'ArrowRight' || event.key === ' ') {
+      event.preventDefault(); // Empêche le défilement de la page
       nextSlide();
     } else if (event.key === 'ArrowLeft') {
       prevSlide();
