@@ -3,68 +3,89 @@
 .slideShow {
     position: relative;
     height: 255px;
-    display: flex;
     margin: 0px 20px;
     max-width: 1240px;
-    background-size: cover;
-    background-position: center;
     overflow: hidden;
     border-radius: 10px;
-    transition: background-image 0.3s ease-in-out;
-}
 
-h5 {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    font-size: 14px;
-    font-weight: 500;
-    color: variables.$titleColor;
-    margin: 13px 0px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-}
-
-.prevButton,
-.nextButton {
-    position: absolute;
-    height: 100%;
-    background: transparent;
-    border: 0;
-}
-
-.nextButton {
-    right: 0;
-}
-
-.slideChevron {
-    height: 19px;
-    color: variables.$titleColor;
-    transition: transform 0.5s ease-in-out;
-}
-
-.slideChevron:hover {
-    transform: scale(1.2);
-}
-
-button {
-    cursor: pointer;
-}
-
-@media (min-width : 1040px) {
-    .slideShow {
-        margin: 0px 100px;
-        height: 415px;
+    .slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out; // Transition fluide entre les slides
+        height: 100%;
     }
 
-    h5 {
-        font-size: 18px;
-        margin: 25px 0px;
+    .slide {
+        min-width: 100%; // Chaque image occupe 100% de la largeur
+        object-fit: cover; // Assure que l'image occupe toute la zone
+    }
+
+    .prevButton,
+    .nextButton {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: transparent;
+        border: 0;
+        height: 100%;
+        width: 100px;
+        cursor: pointer;
+    }
+
+    .prevButton {
+        left: 0px;
+        text-align: start;
+    }
+
+    .nextButton {
+        right: 0px;
+        text-align: end;
     }
 
     .slideChevron {
-        height: 79px;
-        color: variables.$titleColor;
-        margin: 15px;
+        height: 19px;
+        color: #fff;
+        transition: transform 0.5s ease-in-out;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    h5 {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+        margin: 0;
+    }
+}
+
+@media (min-width: 1040px) {
+    .slideShow {
+        height: 415px;
+        margin: 0px 100px;
+
+
+        h5 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .slideChevron {
+            height: 79px;
+        }
+
+        .prevButton {
+            margin-left: 20px;
+        }
+
+        .nextButton {
+            margin-right: 20px;
+        }
+
     }
 }

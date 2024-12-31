@@ -3,54 +3,65 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import { useEffect, useCallback } from 'react';
 
 function SlideShow({ images }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Gestion du passage à l'image suivante
-  const nextSlide = useCallback(() => {
+  // Passer à l'image suivante
+  const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
-  }, [images.length]);
+  };
 
-  // Gestion du retour à l'image précédente
-  const prevSlide = useCallback(() => {
+  // Revenir à l'image précédente
+  const prevSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
-  }, [images.length]);
+  };
 
-  // Effet pour gérer la navigation au clavier
-  useEffect(() => {
-    const handleKeyDown = (event) => {
-      if (event.key === 'ArrowLeft') {
-        prevSlide();
-      } else if (event.key === 'ArrowRight') {
-        nextSlide();
-      }
-    };
+  // Gestion de la navigation au clavier
+  const handleKeyDown = (event) => {
+    if (event.key === 'ArrowRight') {
+      nextSlide();
+    } else if (event.key === 'ArrowLeft') {
+      prevSlide();
+    }
+  };
 
-    window.addEventListener('keydown', handleKeyDown);
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [nextSlide, prevSlide]);
-  // Avec useEffect, les écouteurs d'événements sont correctement nettoyés lors du démontage du composant. du coup = pas de bug
-  // par contre je dois utiliser useCallback sur mes fonctions nextSlide, prevSlide => pour les mémoriser et éviter de Rerender
+  // Ajouter l'écouteur au niveau global
+  window.onkeydown = handleKeyDown;
 
-  // Si il n'y a qu'une seule image = pas de boutons et pas de compteur
+  // Si une seule image : pas de boutons ni de compteur
   if (images.length === 1) {
     return (
-      <div className="slideShow" style={{ backgroundImage: `url(${images[currentIndex]})` }}>
+      <div className="slideShow">
+        <div className="slides">
+          <img src={images[0]} alt={`Slide ${1}`} className="slide" />
+        </div>
       </div>
     );
   }
 
   return (
-    <div className="slideShow" style={{ backgroundImage: `url(${images[currentIndex]})` }}>
+    <div className="slideShow">
+      <div
+        className="slides"
+        style={{
+          transform: `translateX(-${currentIndex * 100}%)`,
+        }}
+      >
+        {images.map((image, index) => (
+          <img
+            key={index}
+            src={image}
+            alt={`Slide ${index + 1}`}
+            className="slide"
+          />
+        ))}
+      </div>
       <button className="prevButton" onClick={prevSlide}>
-        <FontAwesomeIcon icon={faChevronLeft} className='slideChevron' />
+        <FontAwesomeIcon icon={faChevronLeft} className="slideChevron" />
       </button>
       <button className="nextButton" onClick={nextSlide}>
-        <FontAwesomeIcon icon={faChevronRight} className='slideChevron' />
+        <FontAwesomeIcon icon={faChevronRight} className="slideChevron" />
       </button>
       <h5>
         {currentIndex + 1}/{images.length}
