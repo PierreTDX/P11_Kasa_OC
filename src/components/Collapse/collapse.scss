@@ -4,6 +4,7 @@
 .collapse {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .collapseHeader {
@@ -63,6 +64,7 @@ h3 {
         border-radius: 5px;
         height: 54px;
         padding: 0px 21px 0px 15px;
+        border-radius: 10px;
     }
 
     h3 {
@@ -76,6 +78,7 @@ h3 {
     .collapseDescription {
         font-size: 18px;
         gap: 5px;
+        border-radius: 0px 0px 10px 10px;
     }
 
     .collapseHeader.open+.collapseDescription {

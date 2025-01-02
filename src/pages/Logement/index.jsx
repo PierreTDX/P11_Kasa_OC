@@ -19,32 +19,34 @@ function Logement() {
         <>
             <SlideShow images={logementData.pictures} />
             <div className='infosLogement'>
-                <div className=''>
-                    <h6>{logementData.title}</h6>
-                    <p className='location'>{logementData.location}</p>
-                    <div className="tagList">
-                        {logementData.tags.map((tag, index) => (
-                            <div key={index} className="tagContent">
-                                <div className='tag'>
-                                    {tag}
+                <div className='titleLocationStarsHost'>
+                    <div className='titleLocation'>
+                        <h6>{logementData.title}</h6>
+                        <p className='location'>{logementData.location}</p>
+                        <div className="tagList">
+                            {logementData.tags.map((tag, index) => (
+                                <div key={index} className="tagContent">
+                                    <div className='tag'>
+                                        {tag}
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
-                </div>
-                <div className='starsHost'>
-                    <Rating rating={logementData.rating} /> {/* Affichage des étoiles */}
-                    <div className='hostDetails'>
-                        <p className='host'>{logementData.host.name}</p>
-                        <img className="hostImg" src={logementData.host.picture} alt={`photo de ${logementData.host.name}`} />
+                    <div className='starsHost'>
+                        <Rating rating={logementData.rating} /> {/* Affichage des étoiles */}
+                        <div className='hostDetails'>
+                            <p className='host'>{logementData.host.name}</p>
+                            <img className="hostImg" src={logementData.host.picture} alt={`photo de ${logementData.host.name}`} />
+                        </div>
                     </div>
                 </div>
                 <div className='colapseLogement'>
-                    <Collapse
+                    <Collapse className='colapseLogementWidth'
                         key={`${logementData.id}-description`}
                         title="Description"
                         description={logementData.description} />
-                    <Collapse
+                    <Collapse className='colapseLogementWidth'
                         key={`${logementData.id}-equipments`}
                         title="Équipements"
                         description={logementData.equipments}

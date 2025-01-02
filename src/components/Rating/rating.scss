@@ -2,8 +2,14 @@
 
 .allStars {
     display: flex;
+    color: variables.$mainColor;
+    gap: 2px;
+    font-size: 18px;
 }
 
-.star-container {
-    color: variables.$mainColor;
+@media (min-width : 1040px) {
+    .allStars {
+        gap: 4px;
+        font-size: 36px;
+    }
 }

@@ -8,9 +8,9 @@ function Rating({ rating }) {
     return (
         <div className='allStars'>
             {stars.map((fill, index) => (
-                <div key={index} className='star-container'>
-                    <StarRating fill={fill} /> {/* Passer le `fill` à StarRating */}
-                </div>
+
+                <StarRating key={index} fill={fill} />
+
             ))}
         </div>
     );
