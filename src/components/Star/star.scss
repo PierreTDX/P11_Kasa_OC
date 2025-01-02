@@ -1,0 +1,8 @@
+@use './../../utils/style/variables.scss';
+
+.paramStar {
+    width: 25px;
+    height: 25px;
+    color: variables.$defaultBackgroundColor;
+    background-color: green;
+}

@@ -1,6 +1,7 @@
 import './logement.scss';
 import SlideShow from "../../components/Slideshow";
 import Collapse from '../../components/Collapse';
+import Rating from '../../components/Rating';
 import logements from "../../datas/logements.json";
 import { useParams } from "react-router";
 import Error from "../404";
@@ -32,7 +33,7 @@ function Logement() {
                     </div>
                 </div>
                 <div className='starsHost'>
-                    <div>⭐⭐⭐⭐⭐</div>
+                    <Rating rating={logementData.rating} /> {/* Affichage des étoiles */}
                     <div className='hostDetails'>
                         <p className='host'>{logementData.host.name}</p>
                         <img className="hostImg" src={logementData.host.picture} alt={`photo de ${logementData.host.name}`} />

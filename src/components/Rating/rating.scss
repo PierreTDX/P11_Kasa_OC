@@ -1,0 +1,9 @@
+@use './../../utils/style/variables.scss';
+
+.allStars {
+    display: flex;
+}
+
+.star-container {
+    color: variables.$mainColor;
+}
