@@ -50,10 +50,20 @@ a {
     ul.inf768 {
         display: none;
     }
-    
+
     ul.sup768 {
         display: flex;
         font-size: 24px;
 
+    }
+}
+
+@media (max-width: 340px) {
+    header {
+        margin: 20px 20px 20px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
     }
 }

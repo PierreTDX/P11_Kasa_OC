@@ -1,27 +1,28 @@
 @use './../../utils/style/variables.scss';
 
 .cardContent {
-    display: flex;
-    flex-direction: column;
+    display: grid;
     gap: 20px;
     margin: 2px 20px 27px 20px;
     max-width: 1200px;
+    grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
 }
 
-@media (min-width : 1040px) {
+@media (min-width: 1040px) {
     .cardContent {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-content: flex-start;
-        align-items: flex-start;
         gap: 50px 60px;
         background-color: variables.$secondaryBackgroundColor;
         margin: 27px 100px 50px 100px;
-        padding-top: 56px;
-        padding-bottom: 43px;
-        padding-left: 50px;
-        padding-right: 50px;
+        padding: 56px 50px 43px 50px;
         border-radius: 25px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    }
+}
+
+@media (max-width: 375px) {
+    .cardContent {
+        display: flex;
+        flex-direction: column;
     }
 }
