@@ -1,7 +1,7 @@
 import './star.scss';
 import PropTypes from 'prop-types';
 
-function StarRating({ fill }) { // Par défaut, 50% rempli
+function StarRating({ fill }) {
     const gradientId = `gradient-fill-${Math.random()}`; // ID unique pour chaque instance
     const size = 1; // Taille de base pour la dimension, peut être ajustée selon le font-size
 
