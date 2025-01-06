@@ -67,7 +67,6 @@
 @media (min-width: 769px) {
     .slideShow {
         height: 415px;
-        margin: 0px 100px;
         border-radius: 25px;
 
         h5 {
@@ -87,5 +86,11 @@
             padding-right: 25px;
         }
 
+    }
+}
+
+@media (min-width: 1040px) {
+    .slideShow {
+        margin: 0px 100px;
     }
 }

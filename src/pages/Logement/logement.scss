@@ -78,10 +78,6 @@ h6 {
 
 @media (min-width : 769px) {
 
-    .infosLogement {
-        margin: 0px 100px;
-    }
-
     .titleLocationStarsHost {
         display: flex;
         justify-content: space-between;
@@ -141,5 +137,11 @@ h6 {
 
     .colapseLogementWidth {
         width: 50%;
+    }
+}
+
+@media (min-width : 1040px) {
+    .infosLogement {
+        margin: 0px 100px;
     }
 }
