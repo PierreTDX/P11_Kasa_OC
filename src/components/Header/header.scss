@@ -47,6 +47,10 @@ a {
         gap: 57px
     }
 
+}
+
+@media (min-width : 769px) {
+
     ul.inf768 {
         display: none;
     }
@@ -54,11 +58,11 @@ a {
     ul.sup768 {
         display: flex;
         font-size: 24px;
-
     }
 }
 
-@media (max-width: 340px) {
+@media (max-width: 350px) {
+
     header {
         margin: 20px 20px 20px 20px;
         display: flex;
